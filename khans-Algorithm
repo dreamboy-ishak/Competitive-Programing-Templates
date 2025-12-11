@@ -1,0 +1,10 @@
+int kadens_algo(vector<int>num){
+  int currentSum=0, maxSum = INT_MIN;
+
+  for(int i = 0;i<num.size();i++){
+    currentSum += num[i];
+    maxSum = max(maxSum,currentSum);
+    if(currentSum<0) currentSum = 0;
+  }
+  return maxSum;
+}
