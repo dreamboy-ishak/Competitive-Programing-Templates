@@ -1,0 +1,20 @@
+vector<int> PrimeFact(int n){
+
+  vector<int>factors;
+  
+  for(auto u: primes){
+    if(1LL * u*u>n) break;
+    
+    if(n%u == 0){
+      while(n%u == 0){
+        factor.push_back(u);
+        n /= u;
+      }
+    }
+  }
+  
+  if(n>1) factor.push_back(u);
+  
+  return factors;
+  
+}
